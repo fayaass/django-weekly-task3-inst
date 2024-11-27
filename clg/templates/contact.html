@@ -11,9 +11,9 @@
 
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-warning">
+    <nav class="navbar navbar-expand-lg navbar-light bg-secondary">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">clg</a>
+          <a class="navbar-brand" href="#">IT Solutions</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -33,11 +33,12 @@
                   courses
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <li><a class="dropdown-item" href="course">full stack python</a></li>
-                  <li><a class="dropdown-item" href="course">java script</a></li>
-                  <li><a class="dropdown-item" href="course">program in c</a></li>
-                  <li><a class="dropdown-item" href="course">html</a></li>
-                  <li><a class="dropdown-item" href="course">Object Oriented Programing</a></li>
+                  <li><a class="dropdown-item" href="course">Android App Development</a></li>
+                  <li><a class="dropdown-item" href="course">AR/VR</a></li>
+                  <li><a class="dropdown-item" href="course">Cybersecurity</li>
+                  <li><a class="dropdown-item" href="course">DevOps</a></li>
+                  <li><a class="dropdown-item" href="course">React</a></li>
+                  </ul>
                 </ul>
               </li>
             </ul>
@@ -45,55 +46,127 @@
         </div>
       </nav>
       
-      <header>
-        <h1>Contact Us</h1>
-    </header>
-    <table>
-        
-      <form action="" method="post">
-          {% csrf_token %}
-          {{form.as_table}}
-          
-          
+     
+    
+    <style>
+      body {
+          font-family: Arial, sans-serif;
+          margin: 0;
+          padding: 0;
+          background-color: #f4f4f4;
+      }
+      header {
+          background-color: #333;
+          color: white;
+          padding: 20px 0;
+          text-align: center;
+      }
+      header h1 {
+          margin: 0;
+      }
+      section {
+          padding: 20px;
+          margin: 20px;
+      }
+      h2 {
+          color: #333;
+      }
+      .contact-form {
+          background-color: #fff;
+          padding: 20px;
+          border-radius: 8px;
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+          margin-bottom: 20px;
+      }
+      .form-group {
+          margin-bottom: 15px;
+      }
+      label {
+          display: block;
+          margin-bottom: 5px;
+          font-weight: bold;
+      }
+      input, textarea {
+          width: 100%;
+          padding: 10px;
+          margin-top: 5px;
+          border-radius: 4px;
+          border: 1px solid #ddd;
+      }
+      button {
+          background-color: #333;
+          color: white;
+          padding: 10px 20px;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+          font-size: 16px;
+      }
+      button:hover {
+          background-color: #555;
+      }
+      .contact-info {
+          background-color: #fff;
+          padding: 20px;
+          border-radius: 8px;
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+      .contact-info p {
+          margin: 5px 0;
+      }
+      footer {
+          background-color: #333;
+          color: white;
+          text-align: center;
+          padding: 10px;
+          position: fixed;
+          bottom: 0;
+          width: 100%;
+      }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Contact Us</h1>
+  <p>We'd love to hear from you! Reach out for any queries or assistance.</p>
+</header>
+
+<section class="contact-form-section">
+  <h2>Get in Touch</h2>
+  <div class="contact-form">
+      <form action="submit_form.php" method="POST">
+          <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" required>
+          </div>
+          <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="6" required></textarea>
+          </div>
+          <button type="submit">Send Message</button>
       </form>
-  </table>
-     <main>
-        <section class="contact-form">
-            <h2>Get in Touch</h2>
-            <form action="contact" method="POST">
-                <div class="form-group">
-                    <label for="name">Your Name:</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
+  </div>
+</section>
 
-                <div class="form-group">
-                    <label for="email">Your Email:</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
+<section class="contact-info">
+  <h2>Our Contact Information</h2>
+  <p><strong>Email:</strong> <a href="mailto:contact@itsolutions.com">contact@itsolutions.com</a></p>
+  <p><strong>Phone:</strong> +1 234 567 890</p>
+  <p><strong>Address:</strong> 123 Tech Avenue, Suite 456, City, State, Zip Code</p>
+</section>
 
-                <div class="form-group">
-                    <label for="message">Your Message:</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
-                </div>
-
-                <button type="submit" class="submit-btn">Send Message</button>
-            </form> 
-        </section>
-
-        <section class="contact-info">
-            <h2>Our Contact Details</h2>
-            <p>If you prefer to reach us directly, here are our details:</p>
-            <ul>
-                <li>Email: <a href="mailto:info@example.com">info@example.com</a></li>
-                <li>Phone: +1 234 567 890</li>
-                <li>Address: 123 Business St., City, Country</li>
-            </ul>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2024 Your Company. All Rights Reserved.</p>
-    </footer>
+<footer>
+  <p>&copy; 2024 IT Solutions. All rights reserved.</p>
+</footer>
 
 </body>
 </html>
